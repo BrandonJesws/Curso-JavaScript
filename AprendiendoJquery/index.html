@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aprendiendo JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <style>
+        .zabra{
+            border: 5px dashed black;
+        }
+        .zebra{
+            border: 5px dashed black;
+        }
+        .grande{
+            font-size: 30px;
+        }
+        .margenSuperior{
+            display: block;
+            margin-top: 45px;     
+        }
+        .resaltado{
+            border-bottom: 2px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendiendo JQuery</h1>
+
+    <ul>
+        <li><a href="https://www.google.com" title="Google">Ir a Google</a></li>
+        <li><a href="https://www.youtube.com/" title="YouTube"> Ir a YouTube</a></li>
+    </ul>
+    <p id="rojo" class="sinBorde">Ejercicios de JQuery</p>
+    <p id="amarillo" class="zebra">Ejercicios de JQuery</p>
+    <p id="verde" class="sinBorde">Ejercicios de JQuery</p>
+    <p class="zebra">Parrafo en blanco</p>
+
+    <div id="caja">
+        <p>Hola soy una caja</p>
+        <ul>
+            <li>Elemento 1</li>
+            <li class="resaltado">Elemento 2</li>
+        </ul>
+        <span class="resaltado">Soy un span</span>
+    </div>
+    <script type="text/javascript" src="js/01-selectores.js"></script>
+</body>
+</html>
