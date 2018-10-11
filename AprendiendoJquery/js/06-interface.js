@@ -18,4 +18,21 @@ $(document).ready(function(){
             console.log("has soltado algo dentro del area");
         }
     });
+
+    //EFECTOS
+    $("#mostrar").click(function(){
+        $(".cajaEfectos").toggle("shake",4000); //explode, blind, slide, drop, fold, puff, scale, shake//effect
+    });
+    //Tooltip
+    $(document).tooltip();
+
+    //Dialog
+    $("#lanzarP").click(function(){
+        $("#popup").dialog();
+    });
+    //DATEPICKER
+    $("#calendario").datepicker();
+
+    //Tabs
+    $("#pestanas").tabs();
 });
