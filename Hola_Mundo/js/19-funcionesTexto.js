@@ -86,4 +86,4 @@ console.log(busqueda);
 //trim
 
 busqueda = texto1.trim();//quita espacios por delante y por detras
-
+console.log(busqueda);

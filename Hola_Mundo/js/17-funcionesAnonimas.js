@@ -1,7 +1,8 @@
 'use strict'
 
 //Funciones Anonimas
-//Son funciones que no tienen nombre
+//Son funciones que no tienen nombre y se puede guardar en una variable
+//se usa en callbacks
 
 var pelicula = function(nombre){
     return "La pelicula es: " + nombre;
@@ -21,6 +22,6 @@ sumame(5, 7, function(dato){
     console.log("La suma es: ", dato); 
 },
 //Funcion flecha
-(dato)=>{
+(dato)=>{//si solo es un parametro se puede omitir los parentesis
     console.log("La suma por dos es: ", (dato*2));
 });

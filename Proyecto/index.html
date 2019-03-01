@@ -3,11 +3,23 @@
     <head>
         <meta charset="utf8"/>
         <title>Proyecto con JavaScript</title>
-
+        <!--SLIDER-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
         <!--Estilos CSS-->
+        <link id="theme" rel="stylesheet" type="text/css" href="css/green.css" />
         <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
     </head>
     <body>
+        <div id="selector-theme">
+            <div id="to-green">
+            </div>
+            <div id="to-red">
+            </div>
+            <div id="to-blue">
+            </div>
+        </div>
         <section id="global">
             <!--Cabecera-->
             <header>
@@ -26,43 +38,18 @@
                     </ul>
                 </nav>
             </header>
-            <!--slider-->
-            <div id="slider">
 
+            <!--slider-->
+            <div class="slider">
+                <div><img src="imagenes/img/hojas.jpg" title="hojas"/></div>
+                <div><img src="imagenes/img/rojo.jpg" title="rojo" /></div>
+                <div><img src="imagenes/img/cielo.jpg" title="cielo" /></div>
             </div>
+
             <!--Contenido-->
             <section id="content">
                 <div id="post">
-                    <article class="post">
-                        <h2>Pruebas de titulo</h2>
-                        <span class="date">Fecha de publicacion</span>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, 
-                            non provident totam tenetur in molestias dolor? Nam ut, inventore optio 
-                            eveniet debitis vitae maxime ratione natus nulla ipsa blanditiis aperiam!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                            non provident totam tenetur in molestias dolor? Nam ut, inventore optio
-                            eveniet debitis vitae maxime ratione natus nulla ipsa blanditiis aperiam!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                            non provident totam tenetur in molestias dolor? Nam ut, inventore optio
-                            eveniet debitis vitae maxime ratione natus nulla ipsa blanditiis aperiam!
-                        </p>
-                        <a href="#" class="boton-mas">Leer más</a>
-                    </article>
-                    <article class="post">
-                        <h2>Pruebas de titulo</h2>
-                        <span class="date">Fecha de publicacion</span>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                            non provident totam tenetur in molestias dolor? Nam ut, inventore optio
-                            eveniet debitis vitae maxime ratione natus nulla ipsa blanditiis aperiam!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                            non provident totam tenetur in molestias dolor? Nam ut, inventore optio
-                            eveniet debitis vitae maxime ratione natus nulla ipsa blanditiis aperiam!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-                            non provident totam tenetur in molestias dolor? Nam ut, inventore optio
-                            eveniet debitis vitae maxime ratione natus nulla ipsa blanditiis aperiam!
-                        </p>
-                        <a href="#" class="boton-mas">Leer más</a>
-                    </article>
+                    <!--Añadir post desde JSON-->
                 </div>
                 <aside id="sidebar">
                     <div id="about">
@@ -89,6 +76,10 @@
         </section>
         <footer>
             Curso de JavaScript de Undemy &copy;
+
+            <a href="#" class="subir">Ir arriba</a>
         </footer>
+
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

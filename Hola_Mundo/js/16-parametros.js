@@ -1,6 +1,6 @@
 'use strict'
 
-//Parametros REST y SPREAD
+//Parametros REST 
 
 function listadoFrutas(fruta1, fruta2, ...resto_de_elementos){//REST
     console.log("Fruta 1: " + fruta1);
@@ -10,6 +10,6 @@ function listadoFrutas(fruta1, fruta2, ...resto_de_elementos){//REST
 
 listadoFrutas("Naranja", "Manzana", "Sandia", "Pera", "Melon", "Coco");
 
-//SPREAD
+//Parametros SPREAD
 var frutas = ["Naranja", "Manzana"];
 listadoFrutas(...frutas, "Sandia", "Pera", "Melon", "Coco");

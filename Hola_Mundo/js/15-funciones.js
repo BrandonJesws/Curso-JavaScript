@@ -39,7 +39,7 @@ for(var i=1;i<=10;i++){
     calculadora(i, 8);
 }*/
 
-//-----Parametros opcionales
+//-----Parametros opcionales --------------------------
 
 calculadora(5,8);
 calculadora(10,4,true);
