@@ -1,6 +1,7 @@
 <h2>{{titulo}}</h2>
 <ul>
-	<li>Rebook</li>
-	<li>Nike</li>
-	<li>Adidas</li>
+	<li *ngFor='let tenis of zapatos'>
+		{{ tenis.nombre }} - <strong>$ {{ tenis.precio }}</strong>
+		<span *ngIf="tenis.precio < 80 " [style.color]="tenis.precio < 50 ? 'green' : 'red'" >¡Oferta!</span>
+	</li>
 </ul>
