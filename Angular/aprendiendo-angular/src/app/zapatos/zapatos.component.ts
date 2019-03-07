@@ -1,26 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Zapato } from '../models/zapato';
+import { ZapatoService } from '../services/zapatos.service';
 
 @Component({
 	selector: 'zapatos',
-	templateUrl: './zapatos.component.html'
+	templateUrl: './zapatos.component.html',
+	providers: [ZapatoService]
 	})
 
 export class ZapatosComponent {
 	public titulo: string = "Componente de Zapatos";
 	public zapatos: Array<Zapato>;
 	//public marcas: string[];
+	public color: string;
+	public miMarca: string;
 
-	constructor(){
+	constructor(private _zapatoService: ZapatoService){
+		this.color = "orange";
 		//this.marcas = new Array();
-		this.zapatos = [ 
-			new Zapato('Rebook Classic', 'Rebook', 'Blanco', 40, true),
-			new Zapato('Nike Runner MD', 'Nike', 'Negro', 80, true),
-			new Zapato('Adidas Yezzy', 'Adidas', 'Gris', 60, false)
-			];
+		
 	}
 	ngOnInit(){
-		console.log(this.zapatos);
+		this.zapatos = this._zapatoService.getZapatos();
+		alert(this._zapatoService.getTexto());
 	}
 	/*getMarcas(){
 		this.zapatos.forEach((zapato, index) =>{
@@ -30,5 +32,17 @@ export class ZapatosComponent {
 		});
 		console.log(this.marcas);
 	}*/
+	getMarca(){
+		alert(this.miMarca);
+	}
+	addMarca(){
+		//Se hace un push, pero no hice esa practica 
+	}
+	onBlur(){
+		console.log("Has salido del input");
+	}
+	mostrarPalabra(){
+		console.log(this.miMarca);	
+	}
 
 }

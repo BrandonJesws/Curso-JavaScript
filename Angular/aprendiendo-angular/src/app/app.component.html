@@ -9,12 +9,23 @@
   </h1>
 </div>
 <p>{{ descripcion }}</p>
+
+<nav>
+	<a [routerLink]="['/']" [routerLinkActive]="['active']">Home</a>
+	&nbsp;
+	<a [routerLink]="['/zapatos']" [routerLinkActive]="['active']">Zapatos</a>
+	&nbsp;
+	<a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
+	&nbsp;
+	<a [routerLink]="['/videojuegos']" [routerLinkActive]="['active']">Videojuegos</a>
+</nav>
+<hr/>
 <!--
 <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar</button>
 <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar</button>
 
 <videojuego *ngIf="mostrar_videojuegos"></videojuego>
--->
-<zapatos></zapatos>
+
+<zapatos></zapatos>-->
 
 <router-outlet></router-outlet>

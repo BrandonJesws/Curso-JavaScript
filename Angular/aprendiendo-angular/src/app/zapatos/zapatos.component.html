@@ -1,7 +1,34 @@
 <h2>{{titulo}}</h2>
+<p>Añadir Marca</p>
+<p>
+<input type="text" [(ngModel)]="miMarca" (blur)="onBlur()" (keyup.enter)="mostrarPalabra()"/>
+<button (click)="getMarca()">Mostrar Marca</button>
+<button (click)="addMarca()">Añadir Marca</button>
+</p>
+<strong>{{miMarca}}</strong>
 <ul>
 	<li *ngFor='let tenis of zapatos'>
-		{{ tenis.nombre }} - <strong>$ {{ tenis.precio }}</strong>
-		<span *ngIf="tenis.precio < 80 " [style.color]="tenis.precio < 50 ? 'green' : 'red'" >¡Oferta!</span>
+		{{ tenis.nombre }} - <strong [class.altoPrecio]="tenis.precio >= 80" 
+			[ngClass]="{
+			'fondoRojo': tenis.precio > 70, 
+			'subrayado': tenis.marca == 'Nike'
+			}">$ {{ tenis.precio }}</strong>
+		<span *ngIf="tenis.precio < 80 " [style.color]="tenis.precio < 50 ? 'green' : 'red'">¡Oferta!</span>
+	</li>
+</ul>
+<p>El color de la mayoria de nuestros tenies es:</p>
+<input type="text" [(ngModel)]="color"/>
+<ul [ngSwitch]="color">
+	<li *ngSwitchCase="'yellow'">
+		El color predominante es el <span style="background-color: yellow;">amarillo</span>.
+	</li>
+	<li *ngSwitchCase="'red'">
+		El color predominante es el <span style="background-color: red;">rojo</span>.
+	</li>
+	<li *ngSwitchCase="'blue'">
+		El color predominante es el <span style="background-color: blue;">azul</span>.
+	</li>
+	<li *ngSwitchCase="'orange'">
+		El color predominante es el <span style="background-color: orange;">naranja</span>.
 	</li>
 </ul>
