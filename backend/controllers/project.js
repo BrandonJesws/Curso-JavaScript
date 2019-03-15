@@ -88,7 +88,7 @@ var controller = {
 			});
 		});
 	}, 
-	uploadImage: function(req, res){
+	/*uploadImage: function(req, res){
 		var projectId = req.params.id;
 		var fileName = 'Imagen no subida...';
 
@@ -112,7 +112,7 @@ var controller = {
 				message: fileName
 			})
 		}
-	}
+	}*/
 };
 
 module.exports = controller;
